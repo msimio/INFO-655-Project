@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,15 +13,29 @@ body {
 
 body {
   background: linear-gradient(to right, #ffffff, #61dafb);
-  color: black; 
+  color: black;   
+}
+.segment {
+  display: relative;
+  align-items: center;
+  margin-top: 7px; 
+  margin-left: 50px;/* Adjust the margin as needed */
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Header text color */
+.divider {
+  height: 1px;
+  width: 20cm;
+  border: none;
+  border-top: 1px solid #d0cece;
+  margin-top: -20px; /* Adjust the margin-top as needed */
+  margin-bottom: 15px;
+  margin-left: 3.5cm /* Add margin-bottom for separation */
 }
+.segment h2 {
+  color: rgb(126, 126, 126);
+  font-size: 20px;
+}
+
 
 /* Style the input fields and labels */
 label {
@@ -83,12 +95,74 @@ button {
 
 button:hover {
   background-color: #007bb5;
-}
+} 
 .WeightDisplay,.HeightDisplay {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around; 
+}
+
+.box {
+  background: linear-gradient(to right, #fdffea, #f7f730);
+  height: 60px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Dbox {
+  background: linear-gradient(to right, #ffffff, #efefef);
+  height: 40px;
+  width: 525px;
+  border: 1px solid #d0cece;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 65px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 550;
+}
+
+/* Added styles for the select element */
+.Dbox select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: white;
+  width: 165px;
+  outline: none;
+  cursor: pointer;
+}
+
+.box input {
+  width: 60px; 
+  height: 15px; 
+  border: 2px solid rgb(240, 247, 193); 
+  border-radius: 5px; 
+  margin-bottom: 10px; 
+  padding: 5px; 
+  font-size: 14px; 
+  background-color: #f9f9f9; 
+  color: #333;
+}
+
+.box p {
+  margin-top: -5px;
+  align-items: center;
+  font-size: 11px;
 }
 
 .underneath{
@@ -111,6 +185,7 @@ button:hover {
   background: linear-gradient(to right, rgb(244, 121, 121) 0%, rgb(151, 235, 151) 50%, rgb(239, 120, 120) 100%);
   position: relative;
   overflow: hidden;
+  border-radius: 5px; /* Adjust the value to control the roundness */
 }
 
 .cone {

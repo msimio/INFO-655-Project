@@ -1,7 +1,7 @@
 export default function OutputDisplay({ bmivalue }) 
 {
 
-    if(bmivalue<30)
+    if(bmivalue<30&&bmivalue>18.5)
     {return (
     
         <div>
