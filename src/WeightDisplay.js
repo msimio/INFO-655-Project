@@ -1,15 +1,22 @@
-import React from 'react';
+export default function WeightDisplay({ unitvalue }) 
+{
 
-const WeightDisplay = ({ unitvalue }) => {
-  return (
-    <div>
-      {unitvalue === 'US' ? (
+    if(unitvalue==="US")
+    {return (
+    
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
         <p> Pounds</p>
-      ) : (
-        <p> Kilograms</p>
-      )}
-    </div>
-  );
-};
+        
+        </div>
+    )
+    }
+    else
 
-export default WeightDisplay;
+    {return (
+    
+        <div style={{display: 'flex',alignItems: 'center',justifyContent: 'center'}}>
+        <p> Kilograms</p>
+        </div>
+    )
+    }
+}
