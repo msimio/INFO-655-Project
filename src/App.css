@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff, #61dafb);
+  color: black;   
+}
+.segment {
+  display: relative;
+  align-items: center;
+  margin-top: 7px; 
+  margin-left: 50px;
+}
+
+.divider {
+  height: 1px;
+  width: 20cm;
+  border: none;
+  border-top: 1px solid #d0cece;
+  margin-top: -20px; /* Adjust the margin-top as needed */
+  margin-bottom: 15px;
+  margin-left: 3.5cm /* Add margin-bottom for separation */
+}
+.segment h2 {
+  color: rgb(126, 126, 126);
+  font-size: 20px;
+}
+
+
+/* Style the input fields and labels */
+label {
+  margin-right: 10px;
+  
+  color: black; /* Set label text color to black */
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px; 
+}
+
+/* Style the subheadings for unit labels */
+.subheading {
+  color: black; /* Set subheading text color to black */
+}
+
+/* Style the radio buttons */
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GainWeight,
+.LoseWeight {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.GainWeight:hover,
+.LoseWeight:hover {
+  background-color: #007bb5;
+}
+
+
+button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007bb5;
+} 
+.WeightDisplay,.HeightDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around; 
+  max-width: 1100px;
+}
+
+.box {
+  background: linear-gradient(to right, #fdffea, #f7f730);
+  height: 60px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Dbox {
+  background: linear-gradient(to right, #ffffff, #efefef);
+  height: 40px;
+  width: 525px;
+  border: 1px solid #d0cece;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 65px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 550;
+}
+
+/* Added styles for the select element */
+.Dbox select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: white;
+  width: 165px;
+  outline: none;
+  cursor: pointer;
+}
+
+.box input {
+  width: 60px; 
+  height: 15px; 
+  border: 2px solid rgb(240, 247, 193); 
+  border-radius: 5px; 
+  margin-bottom: 10px; 
+  padding: 5px; 
+  font-size: 14px; 
+  background-color: #f9f9f9; 
+  color: #333;
+}
+
+.box p {
+  margin-top: -5px;
+  align-items: center;
+  font-size: 11px;
+}
+
+.underneath{
+  display: grid;
+    grid-template-columns: 50% 50%;
+
+    align-items: center;
+
+    grid-template-areas:"h  w"
+}
+
+.result-bar-container {
+  width: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.result-bar {
+  height: 30px;
+  background: linear-gradient(to right, rgb(244, 121, 121) 0%, rgb(151, 235, 151) 50%, rgb(239, 120, 120) 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px; /* Adjust the value to control the roundness */
+}
+
+.cone {
+  width: 0;
+  height: 0;
+  border-top: 20px solid #fbff00; /* Cone color and size */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cone span {
+  color: black; /* Text color inside the cone */
+  font-size: 9px; /* Font size of the text inside the cone */
+  position: relative;
+  z-index: 1; /* Ensure the text is on top of the cone */
+}
+
+.Outbox {
+  background: linear-gradient(to right, #ffffff, #efefef);
+  height: 40px;
+  width: 75%;
+  border: 1px solid #d0cece;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 550;
+}
+.switch-container {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  margin-left: 20px;
+
+}
+
+.option-label {
+  margin: 0 7px;
+}
+
+.switch {
+  position: relative;
+  width: 60px; /* Adjust width as needed */
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 34px;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px); /* Adjust the translation to match the width */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Adjust the label position */
+.gender-label {
+  margin-top: 6px; 
+  margin-bottom: 6px;
+  font-size: 14px;
+}
