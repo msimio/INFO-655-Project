@@ -12,16 +12,16 @@ import confetti from "https://esm.run/canvas-confetti@1";
 
 
 function App() {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [age, setAge] = useState(0);
-  const [bmi, setBmi] = useState(0);
-  const [bmr, setBmr] = useState(0);
+  const [height, setHeight] = useState();
+  const [weight, setWeight] = useState();
+  const [age, setAge] = useState();
+  const [bmi, setBmi] = useState('');
+  const [bmr, setBmr] = useState();
   const [units, setUnits] = useState('US');
   const [gender, setGender] = useState('Male');
   const [activity, setActivity] = useState(1);
   const [sleephrs, setSleephrs] = useState(1);
-  const [sleepscore, setSleepscore] = useState('Good');
+  const [sleepscore, setSleepscore] = useState('');
 
   const weightAsNumber = Number(weight);
   const heightAsNumber = Number(height);
@@ -96,18 +96,24 @@ const handleClick = () => {
         {/* Container for Boxes */}
         <div className="container">
 
-          {/* Box for Height */}
-          <div className="box">
 
-            <label>
-              <input type="radio" name="Male" value="Male" defaultChecked={true} onChange={(e) => setGender(e.target.value)} checked={gender === 'Male'} />
-              Male
-            </label>
-            <label>
-              <input type="radio" name="Female" value="Female" onChange={(e) => setGender(e.target.value)} checked={gender === 'Female'} />
-              Female
-            </label>
+        <div className="switch-container">
+          <label htmlFor="genderMale" className="option-label">Male</label>
+          <div className="switch">
+            <input type="checkbox" id="genderMale" name="gender" onChange={(e) => setGender(e.target.checked ? 'Female' : 'Male')} checked={gender === 'Female'} />
+            <label htmlFor="genderMale" className="slider round"></label>
           </div>
+          <label htmlFor="genderFemale" className="option-label">Female</label>
+        </div>
+
+        <div className="switch-container">
+          <label htmlFor="toggleUnits" className="option-label">US</label>
+          <div className="switch">
+            <input type="checkbox" id="toggleUnits" onChange={() => setUnits(units === 'Metric' ? 'US' : 'Metric')} checked={units === 'Metric'} />
+            <label htmlFor="toggleUnits" className="slider round"></label>
+          </div>
+          <label htmlFor="toggleUnits" className="option-label">Metric</label>
+        </div>
 
           <div className="box">
             <label>
@@ -131,17 +137,7 @@ const handleClick = () => {
             </label>
             <WeightDisplay unitvalue={units}></WeightDisplay>
           </div>
-          <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          Units:
-          <label>
-            <input type="radio" name="US" value="US" defaultChecked={true} onChange={(e) => setUnits(e.target.value)} checked={units === 'US'} />
-            US
-          </label>
-          <label>
-            <input type="radio" name="Metric" value="Metric" onChange={(e) => setUnits(e.target.value)} checked={units === 'Metric'} />
-            Metric
-          </label>
-        </p>
+
     </div>
     
     </div>
@@ -184,9 +180,7 @@ const handleClick = () => {
 
       
       <div className="segment">
-        
 
-        
 
         <p>Adjust Weight</p>
 
@@ -211,7 +205,7 @@ const handleClick = () => {
 
 
         <div className='Outbox' style={{  justifyContent: 'center' }}>
-        <SleepDisplay sleepvalue={sleepscore}></SleepDisplay>
+        <SleepDisplay sleepvalue={sleepscore} ></SleepDisplay>
         <BMRDisplay bmrvalue={bmr}></BMRDisplay>
         <OutputDisplay bmivalue={bmi}></OutputDisplay>
         <ResultBar bmiResult={bmi} />

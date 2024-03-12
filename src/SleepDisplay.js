@@ -9,6 +9,14 @@ export default function SleepDisplay({ sleepvalue })
         </div>
     )
     }
+    if(sleepvalue==="")
+    {return (
+    
+        <div>
+        <p style={{display: 'flex',alignItems: 'center',justifyContent: 'center',color:'black'}}>Your Sleep Score {sleepvalue}</p>
+        </div>
+    )
+    }
     else
 
     return (
