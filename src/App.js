@@ -63,7 +63,11 @@ const handleClick = () => {
   setBmi(calculateBMI());
   setBmr(calculateBMR());
   //Confetti logic - does not automatically update bmi
-  if(bmi<30&&bmi>18.5){
+  const heightInMeters = units === 'US' ? convertHeight(heightAsNumber, false) / 100 : heightAsNumber / 100;
+  const weightInKg = units === 'US' ? convertWeight(weightAsNumber, false) : weightAsNumber;
+
+
+  if(weightInKg / (heightInMeters ** 2)<30&&weightInKg / (heightInMeters ** 2)>18.5){
   confetti({
     particleCount: 150,
     spread: 60});
