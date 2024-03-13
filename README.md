@@ -7,6 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 **Slider installation might be required:
 npm i rc-slider
 
+## Available Scripts
+
+In the project directory, you can run:
+
 
 ### `npm start`
 
