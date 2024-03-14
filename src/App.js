@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ResultBar from './ResultBar';
-import BMRDisplay from './BMRDisplay';
-import SleepDisplay from './SleepDisplay';
 import WeightDisplay from './WeightDisplay';
 import HeightDisplay from './HeightDisplay';
 import Slider from "rc-slider";

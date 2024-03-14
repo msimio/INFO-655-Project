@@ -1,6 +1,7 @@
 import React from 'react';
 
-const WeightDisplay = ({ unitvalue }) => {
+function WeightDisplay ({ unitvalue }) 
+{
   return (
     <div>
       {unitvalue === 'US' ? (

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const HeightDisplay = ({ unitvalue }) => {
+function  HeightDisplay ({ unitvalue }) 
+{
   return (
     <div>
       {unitvalue === 'US' ? (
