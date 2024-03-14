@@ -1,23 +1,23 @@
 import React from 'react';
 
-const OutputDisplay = ({ bmivalue }) => {
-  const getOutputSentence = (bmi) => {
-    let sentence = 'Your BMI is ';
+export default function OutputDisplay({ bmivalue }) 
+{
 
-    if (bmi < 18.5) {
-      sentence += 'underweight.';
-    } else if (bmi >= 18.5 && bmi < 25) {
-      sentence += 'normal.';
-    } else if (bmi >= 25 && bmi < 30) {
-      sentence += 'overweight.';
-    } else {
-      sentence += 'obese.';
+    if(bmivalue<30)
+    {return (
+    
+        <div>
+        <p style={{display: 'flex',alignItems: 'center',justifyContent: 'center',color:'green'}}>Your BMI {bmivalue}</p>
+        </div>
+    )
     }
+    else
 
-    return sentence;
-  };
-
-  return <p>{getOutputSentence(bmivalue)}</p>;
-};
-
-export default OutputDisplay;
+    {return (
+    
+        <div>
+        <p style={{display: 'flex',alignItems: 'center',justifyContent: 'center',color:'red'}}>Your BMI {bmivalue}</p>
+        </div>
+    )
+    }
+}
