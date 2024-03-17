@@ -2,10 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Notes
+## How to Run
 
 **Slider installation might be required:
 npm i rc-slider
+
+## Notes
+
+This app excels at taking a basic information about a user, including gender, age, height, weight, sleep and activity level and is able expand past a basic BMI calculation but also provide a report on sleep levels and a caloric intake recommendation.
+
+## Use Cases
+
+The use of the app is intuitive and most of the inputs include labels and instructions to guide the user through the input process. At any time the US/Metric toggle may be pressed to update the units on-the-fly. Unit labels will be updated to reflet this change. 
+
+Calculations are only made when the user presses the "Get Fitness Scores" Button. Different animations and outputs are programmed to delpoy for different health scores. 
 
 ## Available Scripts
 
