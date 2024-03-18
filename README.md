@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Group Members
+
+Michael Simio & Yash Chaudhary
+
 ## How to Run
 
 **Slider installation might be required:
